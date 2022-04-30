@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ojasdelivery.mainApp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:name="com.ojasdelivery.mainApp.helper.AppController"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_app_new_logo"
+        android:roundIcon="@mipmap/ic_app_new_logo_round"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:usesCleartextTraffic,android:allowBackup">
+        <activity android:name="com.ojasdelivery.mainApp.activity.NotificationList"></activity>
+        <activity android:name="com.ojasdelivery.mainApp.activity.DrawerActivity" />
+        <activity android:name="com.ojasdelivery.mainApp.activity.WebViewActivity" />
+        <activity android:name="com.ojasdelivery.mainApp.activity.MapActivity" />
+        <activity android:name="com.ojasdelivery.mainApp.activity.OrderListActivity" />
+        <activity android:name="com.ojasdelivery.mainApp.activity.TrackerDetailActivity" />
+        <activity android:name="com.ojasdelivery.mainApp.activity.OrderPlacedActivity" />
+        <activity android:name="com.ojasdelivery.mainApp.activity.CheckoutActivity" />
+        <activity android:name="com.ojasdelivery.mainApp.activity.FullScreenViewActivity" />
+        <activity android:name="com.ojasdelivery.mainApp.activity.ProductDetailActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ojasdelivery.mainApp.activity.SplashActivity" />
+        </activity>
+        <activity
+            android:name="com.ojasdelivery.mainApp.activity.SearchActivity"
+            android:launchMode="singleTop" />
+        <activity android:name="com.ojasdelivery.mainApp.activity.ProfileActivity" />
+        <activity android:name="com.ojasdelivery.mainApp.activity.LoginActivity" />
+        <activity android:name="com.ojasdelivery.mainApp.activity.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter
+                android:autoVerify="true"
+                tools:targetApi="m">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="ekart.optimisticcoder.com"
+                    android:pathPrefix="/refer"
+                    android:scheme="https" />
+                <data
+                    android:host="ekart.optimisticcoder.com"
+                    android:pathPrefix="/itemdetail"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.ojasdelivery.mainApp.activity.MainActivity" />
+        <activity android:name="com.ojasdelivery.mainApp.activity.ReferEarnActivity" />
+        <activity android:name="com.ojasdelivery.mainApp.activity.SubCategoryActivity" />
+        <activity android:name="com.ojasdelivery.mainApp.activity.FavouriteActivity" />
+        <activity android:name="com.ojasdelivery.mainApp.activity.CartActivity" />
+        <activity android:name="com.ojasdelivery.mainApp.activity.ProductListActivity" />
+        <activity android:name="com.ojasdelivery.mainApp.activity.CategoryActivity" />
+        <activity android:name="com.ojasdelivery.mainApp.activity.PayPalWebActivity" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <receiver android:name="com.ojasdelivery.mainApp.helper.SMSBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVED" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.ojasdelivery.mainApp.helper.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name="com.ojasdelivery.mainApp.helper.GPSTracker" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/ic_app_new_logo" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorPrimary" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_api_key" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+       
+    </application>
+
+</manifest>
