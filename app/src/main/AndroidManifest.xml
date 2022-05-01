@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.ojasdelivery.mainApp">
+    package="com.RJ.mainApp">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -10,7 +10,7 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
-        android:name="com.ojasdelivery.mainApp.helper.AppController"
+        android:name="com.RJ.mainApp.helper.AppController"
         android:allowBackup="true"
         android:icon="@mipmap/ic_app_new_logo"
         android:roundIcon="@mipmap/ic_app_new_logo_round"
@@ -19,26 +19,26 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:replace="android:usesCleartextTraffic,android:allowBackup">
-        <activity android:name="com.ojasdelivery.mainApp.activity.NotificationList"></activity>
-        <activity android:name="com.ojasdelivery.mainApp.activity.DrawerActivity" />
-        <activity android:name="com.ojasdelivery.mainApp.activity.WebViewActivity" />
-        <activity android:name="com.ojasdelivery.mainApp.activity.MapActivity" />
-        <activity android:name="com.ojasdelivery.mainApp.activity.OrderListActivity" />
-        <activity android:name="com.ojasdelivery.mainApp.activity.TrackerDetailActivity" />
-        <activity android:name="com.ojasdelivery.mainApp.activity.OrderPlacedActivity" />
-        <activity android:name="com.ojasdelivery.mainApp.activity.CheckoutActivity" />
-        <activity android:name="com.ojasdelivery.mainApp.activity.FullScreenViewActivity" />
-        <activity android:name="com.ojasdelivery.mainApp.activity.ProductDetailActivity">
+        <activity android:name="com.RJ.mainApp.activity.NotificationList"></activity>
+        <activity android:name="com.RJ.mainApp.activity.DrawerActivity" />
+        <activity android:name="com.RJ.mainApp.activity.WebViewActivity" />
+        <activity android:name="com.RJ.mainApp.activity.MapActivity" />
+        <activity android:name="com.RJ.mainApp.activity.OrderListActivity" />
+        <activity android:name="com.RJ.mainApp.activity.TrackerDetailActivity" />
+        <activity android:name="com.RJ.mainApp.activity.OrderPlacedActivity" />
+        <activity android:name="com.RJ.mainApp.activity.CheckoutActivity" />
+        <activity android:name="com.RJ.mainApp.activity.FullScreenViewActivity" />
+        <activity android:name="com.RJ.mainApp.activity.ProductDetailActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.ojasdelivery.mainApp.activity.SplashActivity" />
+                android:value="com.RJ.mainApp.activity.SplashActivity" />
         </activity>
         <activity
-            android:name="com.ojasdelivery.mainApp.activity.SearchActivity"
+            android:name="com.RJ.mainApp.activity.SearchActivity"
             android:launchMode="singleTop" />
-        <activity android:name="com.ojasdelivery.mainApp.activity.ProfileActivity" />
-        <activity android:name="com.ojasdelivery.mainApp.activity.LoginActivity" />
-        <activity android:name="com.ojasdelivery.mainApp.activity.SplashActivity">
+        <activity android:name="com.RJ.mainApp.activity.ProfileActivity" />
+        <activity android:name="com.RJ.mainApp.activity.LoginActivity" />
+        <activity android:name="com.RJ.mainApp.activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -62,14 +62,14 @@
                     android:scheme="https" />
             </intent-filter>
         </activity>
-        <activity android:name="com.ojasdelivery.mainApp.activity.MainActivity" />
-        <activity android:name="com.ojasdelivery.mainApp.activity.ReferEarnActivity" />
-        <activity android:name="com.ojasdelivery.mainApp.activity.SubCategoryActivity" />
-        <activity android:name="com.ojasdelivery.mainApp.activity.FavouriteActivity" />
-        <activity android:name="com.ojasdelivery.mainApp.activity.CartActivity" />
-        <activity android:name="com.ojasdelivery.mainApp.activity.ProductListActivity" />
-        <activity android:name="com.ojasdelivery.mainApp.activity.CategoryActivity" />
-        <activity android:name="com.ojasdelivery.mainApp.activity.PayPalWebActivity" />
+        <activity android:name="com.RJ.mainApp.activity.MainActivity" />
+        <activity android:name="com.RJ.mainApp.activity.ReferEarnActivity" />
+        <activity android:name="com.RJ.mainApp.activity.SubCategoryActivity" />
+        <activity android:name="com.RJ.mainApp.activity.FavouriteActivity" />
+        <activity android:name="com.RJ.mainApp.activity.CartActivity" />
+        <activity android:name="com.RJ.mainApp.activity.ProductListActivity" />
+        <activity android:name="com.RJ.mainApp.activity.CategoryActivity" />
+        <activity android:name="com.RJ.mainApp.activity.PayPalWebActivity" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -81,18 +81,18 @@
                 android:resource="@xml/provider_paths" />
         </provider>
 
-        <receiver android:name="com.ojasdelivery.mainApp.helper.SMSBroadcastReceiver">
+        <receiver android:name="com.RJ.mainApp.helper.SMSBroadcastReceiver">
             <intent-filter>
                 <action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVED" />
             </intent-filter>
         </receiver>
 
-        <service android:name="com.ojasdelivery.mainApp.helper.MyFirebaseMessagingService">
+        <service android:name="com.RJ.mainApp.helper.MyFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-        <service android:name="com.ojasdelivery.mainApp.helper.GPSTracker" />
+        <service android:name="com.RJ.mainApp.helper.GPSTracker" />
 
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
