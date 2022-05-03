@@ -115,13 +115,13 @@ public class AppController extends Application {
     }
 
     public static Boolean isConnected(final Activity activity) {
-        Boolean check = false;
+        boolean check = false;
         ConnectivityManager ConnectionManager = (ConnectivityManager) activity.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = ConnectionManager.getActiveNetworkInfo();
         LayoutInflater inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
 
-        if (networkInfo != null && networkInfo.isConnected() == true) {
+        if (networkInfo != null && networkInfo.isConnected()) {
             check = true;
         } else {
             Toast.makeText(activity, "Check Internet Connection..!!", Toast.LENGTH_SHORT).show();

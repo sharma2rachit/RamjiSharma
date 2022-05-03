@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:fontFamily="@font/georgia_bold"
-            android:text="Ojas Delivery"
+            android:text="RS Electronics"
             android:foregroundGravity="center_horizontal"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
