@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'com.google.gms.google-services'
+apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 30
@@ -43,8 +44,6 @@ dependencies {
     implementation('io.jsonwebtoken:jjwt:0.9.1')
     //foR razorpay
     implementation 'com.razorpay:checkout:1.5.13'
-    implementation platform('com.google.firebase:firebase-bom:29.3.1')
-    implementation 'com.google.firebase:firebase-analytics'
+    //implementation platform('com.google.firebase:firebase-bom:29.3.1')
+    //implementation 'com.google.firebase:firebase-analytics'
 }
-apply plugin: 'com.google.gms.google-services'
-apply plugin: 'kotlin-android-extensions'
