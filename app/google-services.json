@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "889860713819",
+    "project_id": "myapp-22e87",
+    "storage_bucket": "myapp-22e87.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:889860713819:android:bed64691485273dd22be7e",
+        "android_client_info": {
+          "package_name": "com.rselectronics.mainApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "889860713819-42jhiae3djcci6te0utd4qcju2gobak8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rselectronics.mainApp",
+            "certificate_hash": "f02a6dcd8e0a9b0218834ff0661040bcfba97cf5"
+          }
+        },
+        {
+          "client_id": "889860713819-ofqr6eraddm7bf4ekcjas5sivhqlnjin.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgofRtuTrNQU3g9F7Cdv7BCd3atalsFWc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "889860713819-ofqr6eraddm7bf4ekcjas5sivhqlnjin.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
